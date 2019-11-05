@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	printWelcome()
-	printGreeting(getName())
+	printGreeting(responseToPrompt("What is your name?"))
 	fmt.Println("Let's go on an adventure!")
 	travel()
 }
@@ -33,13 +33,6 @@ func responseToPrompt(prompt string) string {
 	fmt.Println(prompt)
 	fmt.Scan(&response)
 	return response
-}
-
-func getName() string{
-	var name string
-	fmt.Println("What is your name?")
-    fmt.Scan(&name)
-    return name
 }
 
 func travelToRandomPlanet() {
